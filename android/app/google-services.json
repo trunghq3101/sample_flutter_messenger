@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "156246735790",
+    "firebase_url": "https://fir-redesign-telegram.firebaseio.com",
+    "project_id": "fir-redesign-telegram",
+    "storage_bucket": "fir-redesign-telegram.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156246735790:android:bfe6232343a0af2831663f",
+        "android_client_info": {
+          "package_name": "com.miller.redesign_telegram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156246735790-8vbntra2n48on22n00hmce8komf7s2ru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6vXm4nWZ0O7ddhWryewHXxdwEn_7ZEB0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156246735790-8vbntra2n48on22n00hmce8komf7s2ru.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
