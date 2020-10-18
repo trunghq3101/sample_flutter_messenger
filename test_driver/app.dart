@@ -1,5 +1,5 @@
 import 'package:flutter_driver/driver_extension.dart';
-import 'package:redesign_telegram/main.dart' as app;
+import 'package:sample_flutter_messenger/main.dart' as app;
 
 void main() {
   enableFlutterDriverExtension();
