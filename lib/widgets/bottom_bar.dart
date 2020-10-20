@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sample_flutter_messenger/keys.dart';
 
 import 'app_icons.dart';
 
@@ -43,6 +44,7 @@ class BottomBar extends StatelessWidget {
                   shape: CircleBorder(),
                 ),
                 child: IconButton(
+                  key: Key(Keys.NEW_ACTION_BTN),
                   icon: Icon(Icons.add),
                   iconSize: 16,
                   color: Colors.white,
