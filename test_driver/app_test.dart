@@ -1,10 +1,11 @@
 import 'package:flutter_driver/flutter_driver.dart';
+import 'package:sample_flutter_messenger/keys.dart';
 import 'package:test/test.dart';
 
+import 'utils.dart';
+
 void main() {
-  group('Testing counter increment', () {
-    final counterTextFinder = find.byValueKey('counter');
-    final buttonFinder = find.byValueKey('increment');
+  group('Testing navigation', () {
     FlutterDriver driver;
 
     setUpAll(() async {
@@ -17,17 +18,17 @@ void main() {
       }
     });
 
-    test('starts at 0', () async {
-      // Use the `driver.getText` method to verify the counter starts at 0.
-      expect(await driver.getText(counterTextFinder), "0");
+    test('check flutter driver health', () async {
+      final health = await driver.checkHealth();
+      expect(health.status, HealthStatus.ok);
     });
 
-    test('increments the counter', () async {
-      // First, tap the button.
-      await driver.tap(buttonFinder);
-
-      // Then, verify the counter text is incremented by 1.
-      expect(await driver.getText(counterTextFinder), "1");
+    test('Open New chats screen', () async {
+      final newChatBtn = find.byValueKey(Keys.NEW_ACTION_BTN);
+      await driver.waitFor(newChatBtn);
+      await delay();
+      await driver.tap(newChatBtn);
+      await delay();
     });
   });
 }
