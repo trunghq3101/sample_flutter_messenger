@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sample_flutter_messenger/routes/new_chat_route.dart';
+import 'package:sample_flutter_messenger/routes/new_action_route.dart';
 import 'package:sample_flutter_messenger/widgets/bottom_bar.dart';
 
 class HomeRoute extends StatefulWidget {
@@ -27,7 +27,7 @@ class _HomeRouteState extends State<HomeRoute> {
   void _handleTabChanged(newIndex) {
     if (newIndex == _screens.length) {
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (_) => NewChatRoute()));
+          .push(MaterialPageRoute(builder: (_) => NewActionRoute()));
     } else {
       setState(() {
         _activeIndex = newIndex;

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:sample_flutter_messenger/routes/home_route.dart';
-import 'package:sample_flutter_messenger/routes/new_chat_route.dart';
+import 'package:sample_flutter_messenger/routes/new_action_route.dart';
 import 'package:sample_flutter_messenger/widgets/app_icons.dart';
 
 import '../mock_navigator_observer.dart';
@@ -81,7 +81,7 @@ void main() {
       await tester.pumpAndSettle();
 
       verify(mockObserver.didPush(any, any));
-      expect(find.byType(NewChatRoute), findsOneWidget);
+      expect(find.byType(NewActionRoute), findsOneWidget);
     });
   });
 }
