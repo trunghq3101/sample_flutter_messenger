@@ -25,9 +25,12 @@ void main() {
 
     test('Open New chats screen', () async {
       final newChatBtn = find.byValueKey(Keys.NEW_ACTION_BTN);
+      final backBtn = find.byValueKey(Keys.BACK_BTN);
       await driver.waitFor(newChatBtn);
       await delay();
       await driver.tap(newChatBtn);
+      await delay();
+      await driver.tap(backBtn);
       await delay();
     });
   });

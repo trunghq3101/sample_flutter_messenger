@@ -11,7 +11,7 @@
 ///      fonts:
 ///       - asset: fonts/AppIcons.ttf
 ///
-///
+/// 
 ///
 import 'package:flutter/widgets.dart';
 
@@ -21,12 +21,10 @@ class AppIcons {
   static const _kFontFam = 'AppIcons';
   static const _kFontPkg = null;
 
-  static const IconData contacts =
-      IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData calls =
-      IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData settings =
-      IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData chats =
-      IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData chats = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData calls = IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData contacts = IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData channel = IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData search = IconData(0xe804, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData encrypted = IconData(0xe805, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }

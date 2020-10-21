@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sample_flutter_messenger/colors.dart';
 import 'package:sample_flutter_messenger/keys.dart';
+import 'package:sample_flutter_messenger/sizes.dart';
 
 import 'app_icons.dart';
 
@@ -46,7 +48,7 @@ class BottomBar extends StatelessWidget {
                 child: IconButton(
                   key: Key(Keys.NEW_ACTION_BTN),
                   icon: Icon(Icons.add),
-                  iconSize: 16,
+                  iconSize: AppSizes.ICON,
                   color: Colors.white,
                   onPressed: () => onClicked(4),
                 ))
@@ -65,13 +67,13 @@ class BottomBarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var color = isSelected ? Colors.black : Colors.black26;
+    var color = isSelected ? Colors.black : AppColors.UNSELECTED_COLOR;
     return IconButton(
         icon: Icon(icon),
         onPressed: () {
           onClicked(index);
         },
-        iconSize: 16,
+        iconSize: AppSizes.ICON,
         color: color);
   }
 }
