@@ -23,7 +23,7 @@ void main() {
       expect(health.status, HealthStatus.ok);
     });
 
-    test('Open New chats screen', () async {
+    test('Open New action screen', () async {
       final newChatBtn = find.byValueKey(Keys.NEW_ACTION_BTN);
       final backBtn = find.byValueKey(Keys.BACK_BTN);
       await driver.waitFor(newChatBtn);
@@ -31,6 +31,24 @@ void main() {
       await driver.tap(newChatBtn);
       await delay();
       await driver.tap(backBtn);
+      await delay();
+    });
+
+    test('Open New action screen and change between tabs', () async {
+      final newChatBtn = find.byValueKey(Keys.NEW_ACTION_BTN);
+      await driver.waitFor(newChatBtn);
+      await delay();
+      await driver.tap(newChatBtn);
+      await delay();
+      await driver.tap(find.byValueKey(Keys.TAB_ENCRYPTED));
+      await delay();
+      await driver.tap(find.byValueKey(Keys.TAB_CHANNEL));
+      await delay();
+      await driver.tap(find.byValueKey(Keys.TAB_CALL));
+      await delay();
+      await driver.tap(find.byValueKey(Keys.TAB_CONTACT));
+      await delay();
+      await driver.tap(find.byValueKey(Keys.TAB_CHATS));
       await delay();
     });
   });
