@@ -1,0 +1,3 @@
+ignore:
+  - "lib/di/**/*"
+  - "lib/helper/app_navigator.dart"

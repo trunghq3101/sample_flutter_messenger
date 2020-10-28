@@ -23,8 +23,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.0
   google_fonts: ^1.1.1
+  http: ^0.12.2
+  json_api: ^4.3.0
+  global_configuration: ^1.6.0
+  timeago: ^2.0.28
+  get_it: ^5.0.1
 
 dev_dependencies:
   flutter_test:
@@ -33,14 +37,16 @@ dev_dependencies:
     sdk: flutter
   test: ^1.14.4
   mockito: ^4.1.2
+  faker: ^1.2.1
 
 flutter:
 
   uses-material-design: true
 
   fonts:
-  - family: AppIcons
-    fonts:
-      - asset: assets/fonts/AppIcons.ttf
+    - family: AppIcons
+      fonts:
+        - asset: assets/fonts/AppIcons.ttf
   assets:
     - google_fonts/
+    - assets/cfg/

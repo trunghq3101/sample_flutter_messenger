@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sample_flutter_messenger/routes/new_action_route.dart';
+import 'package:sample_flutter_messenger/di/module_container.dart';
+import 'package:sample_flutter_messenger/helper/app_navigator.dart';
 import 'package:sample_flutter_messenger/widgets/bottom_bar.dart';
 
 class HomeRoute extends StatefulWidget {
@@ -26,8 +27,9 @@ class _HomeRouteState extends State<HomeRoute> {
 
   void _handleTabChanged(newIndex) {
     if (newIndex == _screens.length) {
-      Navigator.of(context)
-          .push(MaterialPageRoute(builder: (_) => NewActionRoute()));
+      ModuleContainer()
+          .get<AppNavigator>(param1: context)
+          .navigateToNewActionRoute();
     } else {
       setState(() {
         _activeIndex = newIndex;

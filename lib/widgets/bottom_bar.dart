@@ -3,7 +3,7 @@ import 'package:sample_flutter_messenger/colors.dart';
 import 'package:sample_flutter_messenger/keys.dart';
 import 'package:sample_flutter_messenger/sizes.dart';
 
-import 'app_icons.dart';
+import '../app_icons.dart';
 
 class BottomBar extends StatelessWidget {
   final int activeIndex;
