@@ -39,7 +39,7 @@ jobs:
             xcrun instruments -s |
             awk \
               -F ' *[][]' \
-              -v 'device=iPhone 11 Pro Max (13.7)' \
+              -v 'device=iPhone 11 Pro Max (14.0)' \
               '$1 == device { print $2 }'
           )
           xcrun simctl boot "${UDID:?No Simulator with this name found}"
@@ -116,3 +116,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ steps.version.outputs.content }}
           commit: ${{ github.sha }}
+          allowUpdates: true
